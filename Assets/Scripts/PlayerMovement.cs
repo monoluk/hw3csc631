@@ -4,8 +4,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
+    public Animator spin;
     public float forwardForce = 2000f;
     public float sidewayForce = 500f;
+    public float jumpForce = 500f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +21,24 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey("d")){
             rb.AddForce(sidewayForce * Time.deltaTime, 0,0, ForceMode.VelocityChange);
-        }   
+        }
 
-        if(Input.GetKey("a")){
-            rb.AddForce(-sidewayForce * Time.deltaTime, 0,0, ForceMode.VelocityChange);
-        }  
+        if (Input.GetKey("a"))
+        {
+            rb.AddForce(-sidewayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
 
-        if(rb.position.y < -1f){
+        if (Input.GetKeyDown("w"))
+        {
+            spin.SetTrigger("spin");
+            rb.AddForce(0, jumpForce * Time.deltaTime, forwardForce * Time.deltaTime);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            FindObjectOfType<GameManager>().GoToNextLevel();
+        }
+
+        if (rb.position.y < -1f){
             FindObjectOfType<GameManager>().EndGame();
         }
 

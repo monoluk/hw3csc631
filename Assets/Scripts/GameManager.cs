@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("lv1");
     }
 
+    public void GoToNextLevel()
+    {
+        SceneManager.LoadScene("lv3");
+    }
+
     public void CompletedLevel() {
         CompletedLevelUI.SetActive(true);
     }
