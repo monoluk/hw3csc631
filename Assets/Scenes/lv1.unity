@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -608,6 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -690,6 +691,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2044b282b434c84ab5f72ebb6ab8df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: 1
 --- !u!1 &782958651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,8 +1556,8 @@ Rigidbody:
   m_GameObject: {fileID: 1537674184}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 2
-  m_AngularDrag: 0
+  m_Drag: 0
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1569,9 +1583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1537674185}
   spin: {fileID: 1537674190}
-  forwardForce: 2000
-  sidewayForce: 500
-  jumpForce: 500
+  forwardForce: 1000
+  sidewayForce: 100
+  jumpForce: 100
 --- !u!95 &1537674190
 Animator:
   serializedVersion: 3
@@ -1604,6 +1618,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.159401, y: 2.264153, z: 5.3768578}
   m_Center: {x: -3.4227213e-10, y: 1.4147825, z: -7.205729e-11}
+--- !u!114 &1537674193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537674184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b9ddaf89159bb4d86882270dac17ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1549941422
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public Animator spin;
     public float forwardForce = 2000f;
-    public float sidewayForce = 500f;
+    public float sidewayForce = 1f;
     public float jumpForce = 500f;
 
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
             spin.SetTrigger("spin");
             rb.AddForce(0, jumpForce * Time.deltaTime, forwardForce * Time.deltaTime);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("z"))
         {
             FindObjectOfType<GameManager>().GoToNextLevel();
         }

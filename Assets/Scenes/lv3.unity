@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -715,8 +715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 883271866}
+  spin: {fileID: 0}
   forwardForce: 1000
   sidewayForce: 100
+  jumpForce: 500
 --- !u!114 &883271868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +830,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 883271865}
   offset: {x: 0, y: 1, z: -5}
+  height: 5
+  distance: 10
+  angle: 180
+  topDown: 0
 --- !u!1 &991224779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1018,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999196966}
   m_CullTransparentMesh: 0
+--- !u!1 &1672755497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7822834740986535066, guid: 621e3fc0f97df408c82d68b8af82d02d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7822834740408361346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672755498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672755497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b9ddaf89159bb4d86882270dac17ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1672755499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672755497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b9ddaf89159bb4d86882270dac17ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1699481358
 GameObject:
   m_ObjectHideFlags: 0
